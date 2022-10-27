@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 19:25:47 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/10/15 19:52:39 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/10/17 19:32:18 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/10/17 20:30:28 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	main(int ac, char **av)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
+	char	*s1;
+	char	*s2;
+	char	*res;
+
+	(void)ac;
+	s1 = av[1];
+	s2 = av[2];
+	res = ft_strjoin(NULL, NULL);
+	if (!res)
+		printf("qqch est null\n");
+	else
+		printf("%s\n", res);
 	return (0);
 }
