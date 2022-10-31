@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 14:32:26 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/10/31 14:32:41 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/10/31 02:30:02 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/10/31 15:01:24 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (!s1 || !s2 || n == 0)
+		return (0);
+	while (s1[i] == s2[i] && n > 0 && s1[i] && s2[i])
 	{
-		write(fd, &s[i], 1);
 		i++;
+		n--;
 	}
-	write(fd, "\n", 1);
+	return (s1[i] - s2[i]);
 }

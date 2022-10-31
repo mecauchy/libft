@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:45:25 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/10/27 13:06:35 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/10/31 14:26:42 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[i] != '\0' && len)
 	{
-		while (count >= start && len &[i])
+		while (count >= start && len)
 		{
 			str[j] = s[i];
 			len--;
