@@ -5,17 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 20:10:40 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/21 20:13:26 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/16 16:53:57 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/11/28 17:18:29 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    t_list  *tmp;
+	t_list	*tmp;
+	int		i;
 
-    tmp = lst;
-    
+	tmp = lst;
+	i = 0;
+	while (tmp)
+	{
+		tmp = tmp ->next;
+		i++;
+	}
+	return (i);	
 }

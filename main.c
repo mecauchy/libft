@@ -6,17 +6,33 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:32:18 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/01 13:10:19 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/11/02 22:05:08 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-  5   7 #include "libft.h"
+#include "libft.h"
 
-int	main(void)
+void	print_lst(t_list *lst)
 {
-	char	*str;
+	while (lst != NULL)
+	{
+		printf(" %s -> ", lst->content);
+		lst = lst->next;
+	}
+	printf("(null)\n");
+}
 
-	str = calloc(10, sizeof(char));
-	str = malloc(sizeof(char) * 10);
+int	main(int ac, char **av)
+{
+	t_list *lst;
+	
+	for (int i = 1; i < ac; i++)
+	{
+		lst = ft_lstnew(av[i]);
+		ft_lstadd_front(&lst, lst);
+		ft_bzero(lst, sizeof(lst));
+		print_lst(lst);
+	}
 	return (0);
 }
+

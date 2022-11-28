@@ -1,41 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 10:45:25 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/01 13:11:22 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/25 18:39:37 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/11/28 17:51:19 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	ft_len(int n)
 {
-	int				i;
-	int				j;
-	unsigned int	count;
-	char			*str;
+	int	i;
 
 	i = 0;
-	j = 0;
-	count = 0;
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	while (s[i] != '\0' && len)
+	if (n < 0)
 	{
-		if (count >= start && len)
-		{
-			str[j] = s[i];
-			j++;
-			len--;
-		}
-		count++;
+		i++;
+		n = -n;
+	}
+	else if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n = n / 10;
 		i++;
 	}
-	str[j] = '\0';
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	int		count;
+
+	count = ft_len(n);
+	str = (char *)malloc(sizeof(char) * (count + 1));
+	if (!str)
+		return (NULL);
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	else if (n == 0)
+		str[0] = '0';
+	str[count] = '\0';
+	while (n > 0)
+	{
+		count--;
+		str[count] = (n % 10) + '0';
+		n = n / 10;
+	}
 	return (str);
 }
