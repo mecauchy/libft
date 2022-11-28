@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 12:59:33 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/16 16:53:14 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/25 18:39:37 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/11/25 21:01:11 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+static	ft_num(long nb)
 {
-	int	i;
+	long	size;
 
-	i = 0;
-	while (src[i)
+	size = 0;
+	if (nb < 0)
 	{
-		dest[i] = src[i];
-		i++;
+		size *= -1;
 	}
+	if (nb == 0)
+		return (1);f
+	while (nb > 0)
+	{
+		size ++
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	
 }

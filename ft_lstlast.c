@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 12:59:33 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/16 16:53:14 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/16 21:10:16 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/11/16 21:37:45 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (src[i)
+	tmp = lst;
+	while (tmp)
 	{
-		dest[i] = src[i];
-		i++;
+		if (!(tmp->next))
+			return (tmp);
+		tmp = tmp->next;
 	}
+	return (tmp);
 }
