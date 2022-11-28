@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:58:27 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/10/24 16:12:31 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/11/28 20:06:21 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	v_dest = (unsigned char *)dest;
 	v_src = (unsigned char *)src;
 	i = 0;
-	if (!dest && !src)
+	if (!dest || !src)
 		return (NULL);
 	while (n)
 	{

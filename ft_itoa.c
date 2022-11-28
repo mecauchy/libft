@@ -6,15 +6,15 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 18:39:37 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/28 17:51:19 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:14:52 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(int n)
+static long	ft_len(long n)
 {
-	int	i;
+	long	i;
 
 	i = 0;
 	if (n < 0)
@@ -32,7 +32,7 @@ static int	ft_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long n)
 {
 	char	*str;
 	int		count;
