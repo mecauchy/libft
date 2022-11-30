@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_test.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 18:39:37 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/28 23:34:13 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/28 23:43:41 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/11/29 00:10:24 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ static long	ft_len(long n)
 
 	i = 0;
 	if (n < 0)
-	{
-		i++;
 		n = -n;
-	}
+		i++; /*le sens c important ?*/
 	else if (n == 0)
 		return (1);
 	while (n > 0)
 	{
-		n = n/ 10;
+		n = n / 10;
 		i++;
 	}
 	return (i);
@@ -35,10 +33,10 @@ static long	ft_len(long n)
 char	*ft_itoa(long n)
 {
 	char	*str;
-	int		count;
-
-	count = ft_len(n);
-	str = (char *)malloc(sizeof(char) * (count + 1));
+	long	len;
+	
+	len = ft_long(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	if (n < 0)
@@ -47,12 +45,12 @@ char	*ft_itoa(long n)
 		n = -n;
 	}
 	else if (n == 0)
-		str[0] = '0';
-	str[count] = '\0';
+		str = '0';
+	str[len] = '\0';
 	while (n > 0)
 	{
-		count--;
-		str[count] = (n % 10) + '0';
+		len--;
+		str[len] = (n % 10) + '0';
 		n = n / 10;
 	}
 	return (str);
