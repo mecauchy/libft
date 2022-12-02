@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:43:41 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/29 00:10:24 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/01 21:53:28 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static long	ft_len(long n)
 	return (i);
 }
 
-char	*ft_itoa(long n)
+char	ft_f(long n)
 {
 	char	*str;
 	long	len;
