@@ -50,7 +50,9 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_itoa(long n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+size_t	ft_strlcpy(char *dest, char const *src, size_t size);
 
 typedef	struct s_list
 {
