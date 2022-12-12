@@ -14,6 +14,7 @@
 
 # define LIBFT_H
 
+# include <libc.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -53,6 +54,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *dest, char const *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 typedef	struct s_list
 {
