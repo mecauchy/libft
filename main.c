@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:32:18 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/12 18:22:57 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/12 19:02:52 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,10 @@ char	*ft_strcpy(char *str)
 
 int		main(void)
 {
-	char	str[100] = "";
-	char	*test = "milissa";
-	size_t	total_len;
+	char	*dest;
 
-	total_len = ft_strlcat(str, test, sizeof(str));
-	printf(" + %s = %s, len %zu\n", test, str, total_len);
+	dest = malloc(sizeof(char) * 16);
+	memset(dest, 'r', 15);
+	printf("%zu, %s\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 5), dest);
 	return 0;
 }

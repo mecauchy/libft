@@ -7,6 +7,7 @@ SRCS	=	ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 			ft_lstclear.c ft_striteri.c ft_split.c ft_itoa.c ft_lstiter.c \
 			ft_strmapi.c ft_lstmap.c ft_strtrim.c ft_strlcpy.c ft_strlcat.c \
+			ft_strnstr.c
 
 
 HEADER	=	libft.h

@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:11:04 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/01 21:16:18 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/16 15:28:18 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)malloc(sizeof(char *) * (ft_word(s, c) + 1));
 	if (!s)
 		return (free(tab), NULL);
-	if (!tab)
+	if (!tab || !c)
 		return (NULL);
 	while (s[i])
 	{
