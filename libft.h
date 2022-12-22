@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcauchy <mcauchy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:03:38 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/01 12:24:220 by mcauchy          ###   ########.fr       */
+/*   Updated: 2022/12/22 18:02:33 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-# include <strings.h>
 # include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_strlen(const char *str);
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_isdigit(int c);

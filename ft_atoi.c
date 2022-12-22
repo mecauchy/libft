@@ -6,13 +6,13 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 00:33:09 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/10/17 20:21:46 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/22 00:04:34 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

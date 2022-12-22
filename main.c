@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:32:18 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/12 19:02:52 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/22 18:02:29 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		main(void)
 
 	dest = malloc(sizeof(char) * 16);
 	memset(dest, 'r', 15);
-	printf("%zu, %s\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 5), dest);
+	printf("%d, %s\n", strlcat(dest, "lorem ipsum dolor sit amet", 5), dest);
 	return 0;
 }
