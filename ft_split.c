@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 19:17:09 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/28 20:07:33 by mecauchy         ###   ########.fr       */
+/*   Created: 2022/11/29 00:11:04 by mecauchy          #+#    #+#             */
+/*   Updated: 2022/12/22 17:01:40 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@ static int	ft_word(char const *str, char c)
 	size = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] != c)
+		{
+			while (str[i] && str[i] != c)
+				i++;
 			size++;
+		}
 		i++;
 	}
-	return (size);
+	return (size); 
 }
 
 char	**ft_split(char const *s, char c)
@@ -41,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)malloc(sizeof(char *) * (ft_word(s, c) + 1));
 	if (!s)
 		return (free(tab), NULL);
-	if (!tab)
+	if (!tab || !c)
 		return (NULL);
 	while (s[i])
 	{
@@ -56,7 +60,7 @@ char	**ft_split(char const *s, char c)
 			tab[index] = tmp;
 			free(tmp);
 			index++;
-			i = j + 1;
+			i += j;
 		}
 		i++;
 	}
