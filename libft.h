@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:03:38 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/22 18:02:33 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/29 16:27:14 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stddef.h>
+# include <stdint.h>
 
 int		ft_isalpha(int c);
 int		ft_strlen(const char *str);

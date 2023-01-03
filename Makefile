@@ -7,10 +7,10 @@ SRCS	=	ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			ft_striteri.c ft_split.c ft_itoa.c ft_lstiter.c \
 			ft_strmapi.c  ft_strlcpy.c ft_strlcat.c \
 			
-SRCS_B	=	ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+BONUS	=	ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 			ft_lstclear.c ft_lstnew.c ft_lstadd_front.c ft_lstmap.c
 
-OBJS_B	=	$(SRCS_B:.c=.o)
+BONUS_O	=	$(BONUS:.c=.o)
 
 HEADER	=	libft.h
 
@@ -22,7 +22,7 @@ CC		=	cc
 
 CFLAGS	=	-Wall -Wextra -Werror -g3
 
-DEBUG	=
+DEBUG	=	-g3
 
 all		:	$(NAME)
 
@@ -50,4 +50,3 @@ fclean	:	clean
 			/bin/rm -rf $(NAME)
 
 re		:	fclean all
-

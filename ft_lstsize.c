@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:53:57 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/11/28 17:18:29 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:34:00 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_lstsize(t_list *lst)
 		tmp = tmp ->next;
 		i++;
 	}
-	return (i);	
+	return (i);
 }
