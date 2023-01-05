@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:03:38 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/29 16:27:14 by mecauchy         ###   ########.fr       */
+/*   Updated: 2023/01/05 11:04:45 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *dest, char const *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
-typedef	struct s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -68,7 +68,7 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void(*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 int		ft_lstsize(t_list *lst);
