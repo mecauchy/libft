@@ -6,7 +6,7 @@
 #    By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/05 11:01:39 by mecauchy          #+#    #+#              #
-#    Updated: 2023/01/05 11:02:38 by mecauchy         ###   ########.fr        #
+#    Updated: 2023/01/05 11:15:13 by mecauchy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ SRCS	=	ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			ft_striteri.c ft_split.c ft_itoa.c ft_lstiter.c \
 			ft_strmapi.c  ft_strlcpy.c ft_strlcat.c \
 			
-BONUS	=	ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstmap_bonus.c
+BONUS	=	ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c ft_lstmap_bonus.c
 
 BONUS_O	=	$(BONUS:.c=.o)
 
